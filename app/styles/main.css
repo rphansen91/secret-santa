@@ -1,0 +1,8 @@
+.friendItem {position: relative; height: 65px; line-height: 65px; overflow: hidden;}
+.selected {position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(255,0,0,0.3); }
+.profileImage {max-height: 100%;}
+.participant {position: relative; height: 65px; line-height: 65px; overflow: hidden;}
+.greenCover {position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(60,141,13,0.3); }
+.redCover {position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(255,0,0,0.3); }
+.img-center {display: inline-block;}
+.hideInput {position: absolute;top: 0; bottom: 0; left: 0; right: 0; opacity: 0;width: 100%;}

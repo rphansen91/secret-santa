@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+	<h3>Group Name</h3>
+	<input type="text" ng-model="title">
+	<h3>Price Maximum</h3>
+	<input type="number" ng-model="price">
+	<h3>Add Friends</h3>
+	<div class="friendsList">
+		<div class="friendItem" ng-repeat="friend in friends">
+			<div ng-class="{selected: friend.selected}"></div>
+			<div class="col-xs-3">
+				<div class="profileImageContainer" user-photo facebook-id="friend.id"></div>
+			</div>
+			<div class="col-xs-6"><p>{{friend.name}}</p></div>
+			<div class="col-xs-3">
+				<a ng-click="addFriend(friend, $index)" ng-hide="friend.selected" class="btn btn-primary">Add</a>
+				<a ng-click="removeFriend(friend, $index)" ng-show="friend.selected" class="btn btn-danger">Remove</a>
+			</div>
+		</div>
+	</div>
+	<a ng-click="createGame()" class="btn btn-success">Begin Game</a>
+	<p ng-bind="message"></p>
+</div>

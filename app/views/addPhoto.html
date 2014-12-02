@@ -1,0 +1,20 @@
+<div class="jumbotron text-center">
+	<h3 ng-bind="user.attributes.information.name"></h3>
+	<div class="profileImageContainer">
+		<img src="{{photo}}" alt="" class="img-responsive img-center">
+	</div>
+	<div class="col-xs-6">
+		<a class="btn btn-success">
+			Take Photo
+		</a>
+		<input class="hideInput" type="file" file-upload max-size="300" accept="image/*">
+	</div>
+	<div class="col-xs-6">
+		<a ng-click="useDefault()" class="btn btn-danger">
+			Use Default
+		</a>
+	</div>
+	<div class="col-xs-12" ng-show="photoChosen">
+		<a ng-click="savePhoto()" class="btn btn-primary">Continue</a>
+	</div>
+</div>

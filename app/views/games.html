@@ -1,0 +1,8 @@
+<div class="jumbotron text-center">
+	<h3>Secret Santa</h3>
+	<div class="secretSantaGame">
+		<div class="game" ng-repeat="game in games" ng-click="goToGame(game.id)">
+			<p>{{game.attributes.title}}</p>
+		</div>
+	</div>
+</div>

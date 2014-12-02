@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+	<h3 ng-bind="game.attributes.title"></h3>
+	<h5 ng-bind="' Maximum: $' + game.attributes.priceLimit"></h5>
+	
+	<div class="myCompaninion" ng-show="partner">
+		<h1 class="text-left">My Secret Santa</h1>
+		<div class="ProfileImageContainer">
+			<img src="{{partner.attributes.photo}}" alt="" class="img-center img-responsive">
+			<p class="name" ng-bind="partner.attributes.information.name"></p>
+			<div class="btn btn-success">{{partner.attributes.information.first_name}}'s Wishlist</div>
+		</div>
+	</div>
+
+	<div class="participantsList">
+		<h1 class="text-left">Santa's List</h1>
+		<div class="participant" ng-repeat="(key, data) in game.attributes.gameData" >
+			<div ng-class="{greenCover: data.authorized, redCover: !data.authorized}"></div>
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="profileImageContainer" user-photo facebook-id="key"></div>
+				</div>
+				<div class="col-xs-9"><p>{{data.user}}</p></div>
+			</div>
+		</div>
+		<div ng-hide="setAuthorized">
+			<a ng-click="authorize()" class="btn btn-success">Enter</a>
+		</div>
+		<div class="averageReady">
+			<p><b>{{gameAuthorization.auth}}</b> of <b>{{gameAuthorization.total}}</b> have entered the Secret Santa</p>
+		</div>
+	</div>
+</div>
